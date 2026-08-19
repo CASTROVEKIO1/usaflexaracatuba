@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bazar Secreto Usaflex Araçatuba - SP</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-nude: #EFE9E2;
+            --bg-card: #FAF6F0;
+            --text-dark: #2C2825;
+            --text-muted: #665F57;
+            --gold-primary: #C5A059;
+            --gold-gradient: linear-gradient(135deg, #e6c88b 0%, #c5a059 50%, #9e7932 100%);
+            --whatsapp-green: #25D366;
+            --font-main: 'Montserrat', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--bg-nude);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* HERO SECTION */
+        .hero-section {
+            background-color: var(--bg-nude);
+            padding: 30px 0 20px;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr 1fr;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .hero-img-col {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .hero-img-box {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+            height: 200px;
+        }
+
+        .hero-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .hero-img-box:hover img {
+            transform: scale(1.05);
+        }
+
+        /* CENTRAL HEADER CARD */
+        .header-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(197, 160, 89, 0.3);
+            border-radius: 20px;
+            padding: 35px 25px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .brand-logo {
+            font-size: 32px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            color: #1a1a1a;
+            text-transform: uppercase;
+            line-height: 1;
+            margin-bottom: 2px;
+        }
+
+        .brand-subtitle {
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 4px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .bazar-title-badge {
+            background: #1a1a1a;
+            color: #fff;
+            padding: 8px 20px;
+            border-radius: 30px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        .bazar-title-badge i {
+            color: var(--whatsapp-green);
+            font-size: 22px;
+        }
+
+        .discount-highlight {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .discount-small {
+            font-size: 16px;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: var(--text-muted);
+        }
+
+        .discount-large {
+            font-size: 54px;
+            font-weight: 900;
+            line-height: 0.9;
+            color: var(--text-dark);
+        }
+
+        .discount-off {
+            font-size: 38px;
+            font-weight: 800;
+            color: var(--gold-primary);
+            letter-spacing: 2px;
+        }
+
+        /* SELEÇÃO DE NUMERAÇÃO */
+        .sizes-section {
+            background-color: var(--bg-nude);
+            padding: 50px 0 60px;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: var(--text-dark);
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
+        .section-subtitle {
+            font-size: 16px;
+            color: var(--text-muted);
+            font-weight: 500;
+            margin-bottom: 40px;
+        }
+
+        .sizes-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto 30px;
+        }
+
+        /* Botão Dourado Metálico Redondo */
+        .size-btn {
+            width: 85px;
+            height: 85px;
+            border-radius: 50%;
+            background: var(--gold-gradient);
+            padding: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 18px rgba(197, 160, 89, 0.35);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .size-btn-inner {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #E6D5B8;
+        }
+
+        .size-btn .tam-label {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--text-muted);
+            letter-spacing: 1px;
+            line-height: 1;
+        }
+
+        .size-btn .tam-number {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--text-dark);
+            line-height: 1.1;
+        }
+
+        .size-btn:hover {
+            transform: translateY(-8px) scale(1.08);
+            box-shadow: 0 14px 28px rgba(197, 160, 89, 0.5);
+        }
+
+        .size-instruction {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* COMO FUNCIONA E QUEM ORGANIZA */
+        .info-section {
+            background-color: #E2D7CB;
+            padding: 60px 0;
+            border-top: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .info-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+        }
+
+        .info-block {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .info-title {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--text-dark);
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .info-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--gold-primary);
+            border-radius: 2px;
+        }
+
+        .steps-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .step-item {
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+        }
+
+        .step-number {
+            background: var(--gold-gradient);
+            color: #fff;
+            width: 28px;
+            height: 28px;
+            min-width: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 14px;
+            margin-top: 2px;
+        }
+
+        .step-text {
+            font-size: 14px;
+            color: #3d3732;
+        }
+
+        .organizer-text {
+            font-size: 15px;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        .store-image-card {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+            height: 100%;
+            min-height: 320px;
+        }
+
+        .store-image-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* RODAPÉ E LOCALIZAÇÃO */
+        .footer-section {
+            background-color: var(--bg-nude);
+            padding: 50px 0 40px;
+            text-align: center;
+        }
+
+        .location-box {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .location-name {
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--text-dark);
+        }
+
+        .location-address {
+            font-size: 15px;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+
+        .btn-action {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 14px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            margin: 5px;
+        }
+
+        .btn-maps {
+            background-color: #333333;
+            color: #ffffff;
+        }
+
+        .btn-maps:hover {
+            background-color: #000000;
+            transform: translateY(-2px);
+        }
+
+        .btn-whatsapp {
+            background-color: var(--whatsapp-green);
+            color: #ffffff;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #20bd5a;
+            transform: translateY(-2px);
+        }
+
+        .action-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .copyright {
+            margin-top: 40px;
+            font-size: 12px;
+            color: #888;
+        }
+
+        /* MODAL POPUP PARA SELEÇÃO DE GRUPO */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(5px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            padding: 20px;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-card {
+            background: #ffffff;
+            border-radius: 20px;
+            max-width: 450px;
+            width: 100%;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 18px;
+            font-size: 22px;
+            color: #999;
+            cursor: pointer;
+            border: none;
+            background: none;
+        }
+
+        .modal-icon {
+            width: 60px;
+            height: 60px;
+            background: #E8F8EF;
+            color: var(--whatsapp-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            margin: 0 auto 15px;
+        }
+
+        .modal-title {
+            font-size: 20px;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .modal-desc {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 25px;
+        }
+
+        .btn-modal-action {
+            background-color: var(--whatsapp-green);
+            color: white;
+            width: 100%;
+            padding: 14px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 700;
+            text-decoration: none;
+            display: block;
+        }
+
+        /* RESPONSIVIDADE */
+        @media (max-width: 900px) {
+            .hero-grid { grid-template-columns: 1fr; }
+            .hero-img-col { display: grid; grid-template-columns: 1fr 1fr; }
+            .info-container { grid-template-columns: 1fr; padding: 25px; }
+            .store-image-card { min-height: 240px; }
+        }
+
+        @media (max-width: 500px) {
+            .size-btn { width: 70px; height: 70px; }
+            .size-btn .tam-number { font-size: 22px; }
+            .discount-large { font-size: 44px; }
+            .brand-logo { font-size: 26px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- HERO SECTION -->
+<section class="hero-section">
+    <div class="container">
+        <div class="hero-grid">
+            <!-- Imagens Esquerda -->
+            <div class="hero-img-col">
+                <div class="hero-img-box">
+                    <img src="https://lh3.googleusercontent.com/d/1p_GdftWzGc5jKawbzEYdyI2yDZyihTqW" alt="Calçados Usaflex">
+                </div>
+                <div class="hero-img-box">
+                    <img src="https://lh3.googleusercontent.com/d/1Xn5bbpQHB_iY3Ue3Gg7DSfapZu-1Zcxu" alt="Sapatos Confortáveis">
+                </div>
+            </div>
+
+<!-- Banner Central -->
+            <div class="header-card">
+                <div class="brand-logo-img">
+                    <img src="https://lh3.googleusercontent.com/d/1gzZioX3tdiu4Ikhqxirh2M7wapX0SN4g" alt="Logo Usaflex Araçatuba">
+                </div>
+                <div class="brand-subtitle">ARAÇATUBA - SP</div>
+
+<a href="https://chat.whatsapp.com/FDuhPnn8hwq22O2yztESEq?mode=ems_copy_t" target="_blank" style="text-decoration: none; color: inherit; display: inline-block;">
+    <div class="bazar-title-badge">
+        <span>BAZAR SECRETO</span>
+        <i class="fa-brands fa-whatsapp"></i>
+    </div>
+</a>
+                <div class="discount-highlight">
+                    <span class="discount-small">descontos de até</span>
+                    <span class="discount-large">70%</span>
+                    <span class="discount-off">OFF</span>
+                </div>
+            </div>
+
+            <!-- Imagens Direita -->
+            <div class="hero-img-col">
+                <div class="hero-img-box">
+                    <img src="https://lh3.googleusercontent.com/d/1HYL13jOSd43PFmJhmVRRyXHU87xABugJ" alt="Sandálias Usaflex">
+                </div>
+                <div class="hero-img-box">
+                    <img src="https://lh3.googleusercontent.com/d/18iM_8ApVVIGPW_V0rUeC4Fbm5XZ5OqYz" alt="Tênis Femininos">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- SELEÇÃO DE TAMANHOS -->
+    <section class="sizes-section">
+        <div class="container">
+            <h2 class="section-title">Para entrar no "GRUPO SECRETO"</h2>
+            <p class="section-subtitle">Escolha a sua numeração de calçado:</p>
+
+            <div class="sizes-grid">
+                <a href="#" class="size-btn" onclick="openSizeModal(event, '33')">
+                    <div class="size-btn-inner">
+                        <span class="tam-label">TAM</span>
+                        <span class="tam-number">33</span>
+                    </div>
+                </a>
+
+                <a href="#" class="size-btn" onclick="openSizeModal(event, '34')">
+                    <div class="size-btn-inner">
+                        <span class="tam-label">TAM</span>
+                        <span class="tam-number">34</span>
+                    </div>
+                </a>
+
+                <a href="#" class="size-btn" onclick="openSizeModal(event, '35')">
+                    <div class="size-btn-inner">
+                        <span class="tam-label">TAM</span>
+                        <span class="tam-number">35</span>
+                    </div>
+                </a>
+
+                <a href="#" class="size-btn" onclick="openSizeModal(event, '36')">
+                    <div class="size-btn-inner">
+                        <span class="tam-label">TAM</span>
+                        <span class="tam-number">36</span>
+                    </div>
+                </a>
+
+                <a href="#" class="size-btn" onclick="openSizeModal(event, '37')">
+                    <div class="size-btn-inner">
+                        <span class="tam-label">TAM</span>
+                        <span class="tam-number">37</span>
+                    </div>
+                </a>
+
+                <a href="#" class="size-btn" onclick="openSizeModal(event, '38')">
+                    <div class="size-btn-inner">
+                        <span class="tam-label">TAM</span>
+                        <span class="tam-number">38</span>
+                    </div>
+                </a>
+
+                <a href="#" class="size-btn" onclick="openSizeModal(event, '39')">
+                    <div class="size-btn-inner">
+                        <span class="tam-label">TAM</span>
+                        <span class="tam-number">39</span>
+                    </div>
+                </a>
+
+                <a href="#" class="size-btn" onclick="openSizeModal(event, '40')">
+                    <div class="size-btn-inner">
+                        <span class="tam-label">TAM</span>
+                        <span class="tam-number">40</span>
+                    </div>
+                </a>
+            </div>
+
+            <p class="size-instruction">
+                CLIQUE NA SUA NUMERAÇÃO PARA ENTRAR NO BAZAR SECRETO USAFLEX WhatsApp.
+            </p>
+        </div>
+    </section>
+
+    <!-- INFORMAÇÕES E REGRAS -->
+    <section class="info-section">
+        <div class="container">
+            <div class="info-container">
+                <div class="info-block">
+                    <div>
+                        <h3 class="info-title">Como Funciona?</h3>
+                        <ul class="steps-list" style="margin-top: 15px;">
+                            <li class="step-item">
+                                <span class="step-number">1</span>
+                                <div class="step-text">
+                                    <strong>1 vez por mês</strong>, são postados no grupo da sua numeração variadas opções de modelos com desconto de <strong>até 70% OFF</strong>.
+                                </div>
+                            </li>
+                            <li class="step-item">
+                                <span class="step-number">2</span>
+                                <div class="step-text">
+                                    Você seleciona a imagem do produto enviado no grupo, respondendo <strong>“EU QUERO”</strong>.
+                                </div>
+                            </li>
+                            <li class="step-item">
+                                <span class="step-number">3</span>
+                                <div class="step-text">
+                                    Enviaremos o link de pagamento via WhatsApp ou você pode ir direto até a loja pagar o calçado desejado.
+                                </div>
+                            </li>
+                            <li class="step-item">
+                                <span class="step-number">4</span>
+                                <div class="step-text">
+                                    Retire o produto em nossas lojas ou receba no conforto da sua casa mediante taxa de entrega padrão de <strong>R$ 10,00</strong> (para Araçatuba SP.)
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div style="margin-top: 10px;">
+                        <h3 class="info-title">Quem organiza?</h3>
+                        <p class="organizer-text">
+                            O Bazar Secreto via WhatsApp, é organizado pela loja <strong>Usaflex unidade de Araçatuba</strong>.
+                        </p>
+                    </div>
+                </div>
+
+<div class="store-image-card">
+    <a href="https://www.google.com/maps/dir//R.%20Cussy%20de%20Almeida%20J%C3%BAnior,%201071%20-%20Centro,%20Ara%C3%A7atuba%20-%20SP,%2016010-400" target="_blank">
+        <img src="https://lh3.googleusercontent.com/d/1ixTjzFyaKdo3KPGUCfBrrBOtYtk_Yjjb" alt="Loja Usaflex Araçatuba">
+    </a>
+</div>
+    </div> <!-- Fechamento da div.info-container -->
+</div> <!-- Fechamento da div.container -->
+</section> <!-- Fechamento da section.info-section -->
+
+
+    <!-- RODAPÉ -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="location-box">
+                <div class="location-name">Usaflex Araçatuba SP</div>
+                <div class="location-address">
+                    Av. Cussy de Almeida Jr. 1071<br>
+                    Araçatuba - SP.
+                </div>
+
+                <div class="action-buttons">
+                    <a href="https://www.google.com/maps/dir//R.%20Cussy%20de%20Almeida%20J%C3%BAnior,%201071%20-%20Centro,%20Ara%C3%A7atuba%20-%20SP,%2016010-400" target="_blank" class="btn-action btn-maps">
+                        <i class="fa-solid fa-location-dot"></i> COMO CHEGAR: (CLIQUE AQUI)
+                    </a>
+                    <a href="https://wa.me/5518991128665?text=Oii!%20Gostaria%20de%20receber%20informa%C3%A7%C3%B5es%20sobre%20o%20Bazar%20Secreto" target="_blank" class="btn-action btn-whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i> Ficou com dúvida? Fale Conosco!
+                    </a>
+                </div>
+            </div>
+
+            <p class="copyright">
+                &copy; Usaflex Araçatuba SP. Todos os direitos reservados.
+            </p>
+        </div>
+    </footer>
+
+    <!-- MODAL POPUP -->
+    <div class="modal-overlay" id="whatsappModal">
+        <div class="modal-card">
+            <button class="close-modal" onclick="closeSizeModal()">&times;</button>
+            <div class="modal-icon">
+                <i class="fa-brands fa-whatsapp"></i>
+            </div>
+            <h3 class="modal-title">Grupo TAM  <span id="modalSizeNum">35</span></h3>
+            <p class="modal-desc">Clique abaixo para entrar no Grupo VIP do WhatsApp exclusivo para o tamanho <strong id="modalSizeText">35</strong>.</p>
+            <a href="#" id="modalGroupLink" target="_blank" class="btn-modal-action" onclick="closeSizeModal()">
+                Entrar no Grupo WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // Mapeamento dos Links dos Grupos de WhatsApp por Tamanho
+        // INSIRA OS SEUS LINKS REAIS DOS GRUPOS ABAIXO:
+        const whatsappLinks = {
+            '33': 'https://l.instagram.com/?u=https%3A%2F%2Fchat.whatsapp.com%2FFDuhPnn8hwq22O2yztESEq%3Fmode%3Dems_copy_t%26utm_source%3Dig%26utm_medium%3Dsocial%26utm_content%3Dlink_in_bio%26fbclid%3DPAcGRvZgJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAafGArRwxT_AwKOwZA5mesKdSX925XZ_us5hbgFMkAm5hGKcZDHd4YWLvH8CVg_aem_Uwq9G70b05dYuQyCekGhPA&e=AUAIhFgcwY4temTFqTCrqfNxwYqNpSw_q1JQVH1bvuhtYTVFWhdMlNT1mGhNp0SZYowR77solDVPi2d8DccEcKhRPJlhzz8Z5KpvTeDz0QCoPqnw3u_OGwH4ZFKM_pZRPyoxKtE',
+            '34': 'https://l.instagram.com/?u=https%3A%2F%2Fchat.whatsapp.com%2FFDuhPnn8hwq22O2yztESEq%3Fmode%3Dems_copy_t%26utm_source%3Dig%26utm_medium%3Dsocial%26utm_content%3Dlink_in_bio%26fbclid%3DPAcGRvZgJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAafGArRwxT_AwKOwZA5mesKdSX925XZ_us5hbgFMkAm5hGKcZDHd4YWLvH8CVg_aem_Uwq9G70b05dYuQyCekGhPA&e=AUAIhFgcwY4temTFqTCrqfNxwYqNpSw_q1JQVH1bvuhtYTVFWhdMlNT1mGhNp0SZYowR77solDVPi2d8DccEcKhRPJlhzz8Z5KpvTeDz0QCoPqnw3u_OGwH4ZFKM_pZRPyoxKtE',
+            '35': 'https://l.instagram.com/?u=https%3A%2F%2Fchat.whatsapp.com%2FFDuhPnn8hwq22O2yztESEq%3Fmode%3Dems_copy_t%26utm_source%3Dig%26utm_medium%3Dsocial%26utm_content%3Dlink_in_bio%26fbclid%3DPAcGRvZgJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAafGArRwxT_AwKOwZA5mesKdSX925XZ_us5hbgFMkAm5hGKcZDHd4YWLvH8CVg_aem_Uwq9G70b05dYuQyCekGhPA&e=AUAIhFgcwY4temTFqTCrqfNxwYqNpSw_q1JQVH1bvuhtYTVFWhdMlNT1mGhNp0SZYowR77solDVPi2d8DccEcKhRPJlhzz8Z5KpvTeDz0QCoPqnw3u_OGwH4ZFKM_pZRPyoxKtE',
+            '36': 'https://l.instagram.com/?u=https%3A%2F%2Fchat.whatsapp.com%2FFDuhPnn8hwq22O2yztESEq%3Fmode%3Dems_copy_t%26utm_source%3Dig%26utm_medium%3Dsocial%26utm_content%3Dlink_in_bio%26fbclid%3DPAcGRvZgJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAafGArRwxT_AwKOwZA5mesKdSX925XZ_us5hbgFMkAm5hGKcZDHd4YWLvH8CVg_aem_Uwq9G70b05dYuQyCekGhPA&e=AUAIhFgcwY4temTFqTCrqfNxwYqNpSw_q1JQVH1bvuhtYTVFWhdMlNT1mGhNp0SZYowR77solDVPi2d8DccEcKhRPJlhzz8Z5KpvTeDz0QCoPqnw3u_OGwH4ZFKM_pZRPyoxKtE',
+            '37': 'https://l.instagram.com/?u=https%3A%2F%2Fchat.whatsapp.com%2FFDuhPnn8hwq22O2yztESEq%3Fmode%3Dems_copy_t%26utm_source%3Dig%26utm_medium%3Dsocial%26utm_content%3Dlink_in_bio%26fbclid%3DPAcGRvZgJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAafGArRwxT_AwKOwZA5mesKdSX925XZ_us5hbgFMkAm5hGKcZDHd4YWLvH8CVg_aem_Uwq9G70b05dYuQyCekGhPA&e=AUAIhFgcwY4temTFqTCrqfNxwYqNpSw_q1JQVH1bvuhtYTVFWhdMlNT1mGhNp0SZYowR77solDVPi2d8DccEcKhRPJlhzz8Z5KpvTeDz0QCoPqnw3u_OGwH4ZFKM_pZRPyoxKtE',
+            '38': 'https://l.instagram.com/?u=https%3A%2F%2Fchat.whatsapp.com%2FFDuhPnn8hwq22O2yztESEq%3Fmode%3Dems_copy_t%26utm_source%3Dig%26utm_medium%3Dsocial%26utm_content%3Dlink_in_bio%26fbclid%3DPAcGRvZgJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAafGArRwxT_AwKOwZA5mesKdSX925XZ_us5hbgFMkAm5hGKcZDHd4YWLvH8CVg_aem_Uwq9G70b05dYuQyCekGhPA&e=AUAIhFgcwY4temTFqTCrqfNxwYqNpSw_q1JQVH1bvuhtYTVFWhdMlNT1mGhNp0SZYowR77solDVPi2d8DccEcKhRPJlhzz8Z5KpvTeDz0QCoPqnw3u_OGwH4ZFKM_pZRPyoxKtE',
+            '39': 'https://l.instagram.com/?u=https%3A%2F%2Fchat.whatsapp.com%2FFDuhPnn8hwq22O2yztESEq%3Fmode%3Dems_copy_t%26utm_source%3Dig%26utm_medium%3Dsocial%26utm_content%3Dlink_in_bio%26fbclid%3DPAcGRvZgJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAafGArRwxT_AwKOwZA5mesKdSX925XZ_us5hbgFMkAm5hGKcZDHd4YWLvH8CVg_aem_Uwq9G70b05dYuQyCekGhPA&e=AUAIhFgcwY4temTFqTCrqfNxwYqNpSw_q1JQVH1bvuhtYTVFWhdMlNT1mGhNp0SZYowR77solDVPi2d8DccEcKhRPJlhzz8Z5KpvTeDz0QCoPqnw3u_OGwH4ZFKM_pZRPyoxKtE',
+            '40': 'https://l.instagram.com/?u=https%3A%2F%2Fchat.whatsapp.com%2FFDuhPnn8hwq22O2yztESEq%3Fmode%3Dems_copy_t%26utm_source%3Dig%26utm_medium%3Dsocial%26utm_content%3Dlink_in_bio%26fbclid%3DPAcGRvZgJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAafGArRwxT_AwKOwZA5mesKdSX925XZ_us5hbgFMkAm5hGKcZDHd4YWLvH8CVg_aem_Uwq9G70b05dYuQyCekGhPA&e=AUAIhFgcwY4temTFqTCrqfNxwYqNpSw_q1JQVH1bvuhtYTVFWhdMlNT1mGhNp0SZYowR77solDVPi2d8DccEcKhRPJlhzz8Z5KpvTeDz0QCoPqnw3u_OGwH4ZFKM_pZRPyoxKtE'
+        };
+
+        function openSizeModal(event, size) {
+            event.preventDefault();
+            
+            const modal = document.getElementById('whatsappModal');
+            const modalSizeNum = document.getElementById('modalSizeNum');
+            const modalSizeText = document.getElementById('modalSizeText');
+            const modalGroupLink = document.getElementById('modalGroupLink');
+
+            const link = whatsappLinks[size] || '#';
+
+            modalSizeNum.innerText = size;
+            modalSizeText.innerText = size;
+            modalGroupLink.href = link;
+
+            modal.classList.add('active');
+        }
+
+        function closeSizeModal() {
+            document.getElementById('whatsappModal').classList.remove('active');
+        }
+
+        document.getElementById('whatsappModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeSizeModal();
+            }
+        });
+    </script>
+</body>
+</html>
